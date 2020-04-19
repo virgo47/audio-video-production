@@ -1,0 +1,22 @@
+= Kontakt (player)
+
+== Different outputs than 1|2 as default
+
+Example: Realtek sound card uses first two outputs (`1|2` in Kontakt) as L|R for digital.
+We need to use outputs 3|4 which are "speaker outputs" by default.
+
+In *File | Options* we can only set the *Driver* and the *Device*:
+
+image::images/kontakt-options-audio.png[]
+
+The sound may be indicated in the UI, but there is still no sound in the speakers.
+To fix this, we need to go display *Outputs* ((1) in the picture below, or `F2`).
+
+image::images/kontakt-output-preset.png[]
+
+Then click on the *Channel Configuration* (2).
+For each channel (3) choose the right physical output (4).
+To save this as default so we don't have to do it every time we start standalone Kontakt, click
+on the *Presets / Batch Configuaration* drop down (5), choose *Save current output ... for*
+and *Standalone*.
+It is better to use it only for *Standalone* as for VST usage outputs `1|2` are perfectly fine.
