@@ -1,0 +1,7 @@
+= Maschine controller
+
+== MIDI controller
+
+To activate MIDI mode press `Shift+F1`.
+Pads work as notes.
+To switch octaves press `Group+A-H` which are two top pad rows shining blue when `Group` is pressed.
