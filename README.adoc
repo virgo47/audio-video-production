@@ -1,0 +1,10 @@
+= Music production notes
+
+Notes for:
+
+* link:maschine-controller.adoc[Maschine controller]
+* link:kontakt.adoc[Kontakt (player)]
+
+Precudures:
+
+* nothing so far...
