@@ -1,0 +1,22 @@
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+:toc:
+:toc-placement!:
+
+= Sound notes
+
+toc::[]
+
+== Long, effects
+
+* Ethereal Earth - Frost Drone
+* Giant
+** Giant Noises; The Giant Cinematic the same, but drier; Tunnel Light more distant; Vortex with echo)
+** Kataklysm, Orchestral Sphere, Overtone Reverse
+** Phosphorescence (long, squeaking, going down later)
+* Kinetic Metal (Alloy Cyclone, )

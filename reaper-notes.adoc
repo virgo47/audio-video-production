@@ -29,17 +29,6 @@ toc::[]
 ** `Shift+drag` move without snap
 ** `Ctrl+Shift+drag` move in one axis only
 
-== Good sounds
-
-=== Long, effects
-
-* Ethereal Earth - Frost Drone
-* Giant
-** Giant Noises; The Giant Cinematic the same, but drier; Tunnel Light more distant; Vortex with echo)
-** Kataklysm, Orchestral Sphere, Overtone Reverse
-** Phosphorescence (long, squeaking, going down later)
-* Kinetic Metal (Alloy Cyclone, )
-
 == Setup
 
 To install plugins easily, check https://reapack.com/user-guide[ReaPack].
@@ -65,3 +54,7 @@ image::images/reaper-midi-cc-mapper-x-velocity-boost.png[JS MIDI CC Mapper X - V
 7. Then click on the curve and it will display it in the pane on the left.
 It will always adjust the shape based on the parameters after you click the shape.
 8. Finally, save the preset.
+
+=== Preferences changes
+
+* In *Mouse editing behavior* disable *Mouse click/edit in track view changes track selection*.

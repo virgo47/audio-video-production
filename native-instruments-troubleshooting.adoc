@@ -1,0 +1,7 @@
+= Native Instruments troubleshooting
+
+== Komplete Kontrol
+
+If there is a stuck instrument in the library (e.g. after manual VST uninstall),
+https://support.native-instruments.com/hc/en-us/articles/209554889-My-KOMPLETE-KONTROL-Browser-is-Empty-or-Incomplete[rebuild the database].
+Don't worry, favourite (starred) instruments are still preserved.
