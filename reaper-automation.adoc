@@ -1,0 +1,25 @@
+= Reaper Automation
+
+== Using Komplete Kontrol
+
+To use Komplete Kontrol M32 keyboard and Komplete Kontrol (KK) plugin:
+
+* The plugin has to be active (open in a window), otherwise its parameters don't react.
+(This may be ReaControl limitation.)
+* Keyboard has to be set to *Plug-in* mode, not Track/Instance.
+* Check that parameters of the instrument in KK can be controlled by the keyboard.
+* *Latch* automation mode must be used, *Touch* returns to original value after a short time without change.
+* Record, play the keyboard and turn the knobs - everything is recorded.
+Envelope lanes are added as needed when they are first touched.
+
+Possible problems:
+
+* Unwanted initial envelope point is created before the first change:
+TODO... more experiments needed
+
+== Manual/mouse automation
+
+* When changing the value with the knob in the envelope lane, we can create either a jump
+(additional point before the change) or gradual change towards the point (single point is added).
+This is controlled in *Preferences | Editing Behaviour | Automation* by *When recording automation and stopped* option.
+For ramps choose: *Do not add additional points*.
