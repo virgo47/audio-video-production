@@ -12,6 +12,16 @@ endif::[]
 
 toc::[]
 
+== Project settings
+
+To keep items time-based instead of BPM (so we can change BPM without stretching audio):
+
+* Open *Project Settings* with `Alt+Enter`.
+* In the tab *Project Settings* change *Timebase for items/envelopes/markers* to *Time*.
+* For file management watch https://youtu.be/tk6WLWDYlyU[this REAPER Blog video].
+
+TODO: But MIDI is already affected, it is better to change BPM before adding MIDI.
+
 == Procedures
 
 * Time selection for item: `Shift+double-click`
@@ -19,6 +29,8 @@ toc::[]
 * Edit region: `Shift+double-click`
 * Render: `Ctrl+Alt+R`
 ** File name example: `snp10-$regionnumber-$region`
+** Or if you name project like `snp11` it can be all wildcards: `$project-$regionnumber-$region`
+* If *Render* button does not enable, check either *Region Manager* or *Region Matrix* (close to the top of the Render dialog) and set region render to *Master mix*.
 
 === Envelopes
 
