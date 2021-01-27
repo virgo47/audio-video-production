@@ -1,0 +1,45 @@
+= Using Native Instruments Battery 4
+
+Load as any other VSTi
+
+== Warning about note names
+
+Battery designates the notes one octave number lower, that is
+"Yamaha convention" where MIDI 60 (middle C) is `C3`, otherwise commonly known
+as `C4` - which is also used for Maschine.
+Battery's first cell starts at MIDI node 36 (Battery designates it as `C1`),
+with lower notes playing the same cell as well, going up to MIDI 51
+(shown as `D#2`), with all notes above playing the last cell too.
+Maschine's first pad is triggered with `C3` (MIDI 48) and the last one with
+`D#4` (MIDI 63).
+
+== Using expansions with Battery
+
+Native Instruments https://www.native-instruments.com/en/specials/komplete/expansions/[Expansions]
+can be loaded to Maschine VST, but it can also be used with
+https://www.native-instruments.com/en/products/komplete/drums/battery-4/[Battery].
+
+In Komplete Kontrol VSTi choose *Battery* from *Library/All Instruments* (*Category* view).
+The sounds displayed now are from *Battery 4 Factory Library* and from all the expansions.
+Clicking on *All Banks* it's possible to narrow the search to a specific expansion.
+
+[NOTE]
+It is possible to add more columns and rows to the Battery and play even more
+sounds, not just 16.
+This makes it more flexible than a single kit in Maschine.
+
+== Switching MIDI item between Battery and Maschine
+
+[TIP]
+Simply don't do it.
+
+There are differences in note-mapping between Maschine and Battery, not only
+in the range, but also in the layout of the sounds (and also in note names).
+
+As the order of sounds in the kit is different too, and it's unsure whether
+the discrepancies are consistent between all the kits, simple MIDI
+transposition is not enough.
+Each note (sound) has to be transposed separately as needed.
+It is not advised to switch between the two VSTi-s for the same MIDI items or tracks.
+If either VSTi is chosen for the job, stick with it, at least for the particular
+track (or each MIDI item, which is extreme).
