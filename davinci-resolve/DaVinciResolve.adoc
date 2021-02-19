@@ -30,7 +30,12 @@ group *Working Folders* to values like `C:\work\tmp\resolve-cache\ProxyMedia`,
 
 How to hover above a map with rotation in place after translate?
 
-== Title packs
+== 3rd-party title packs
+
+[TIP]
+The procedure of installing titles by copying to the directory is an "old way".
+In Resolve 17 you can directly drag-and-drop the files into the Fusion's Effect Library.
+See section on *Transitions* below.
 
 There are at least three locations for Fusion titles in DaVinci Resolve:
 
@@ -74,3 +79,21 @@ Used custom titles:
 
 * https://motionarray.com/davinci-resolve-templates/simple-creative-titles-860872[Simple
 Creative Titles] by vladoskin
+
+== 3rd-party transitions
+
+See https://youtu.be/xW2bq8Quw64[this video] by MrAlexTech for example how to install free
+"Ultimate Seamless Transitions pack for DaVinci Resolve 17".
+
+Following picture summarizes the process (after download) - *you must be on the _Fusion_ page*:
+
+image:davinci-resolve-custom-fusion-transition-installation.png[]
+
+1. Go to *Effects Library*.
+2. Choose *Edit Templates/Transitions*
+3. Unpack the assets, it can't be installed from inside the zip.
+4. Drag-and-drop the selected `*.settings` files to the right side of the *Effects Library*.
+
+After a while the UI refreshes and the new effects appear in the list.
+If we check the folder where they are installed (right-click the effect, then click *Show Folder*
+like before) we see that Resolve prefers location under `$APPDATA`.
