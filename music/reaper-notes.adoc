@@ -7,6 +7,7 @@ ifdef::env-github[]
 endif::[]
 :toc:
 :toc-placement!:
+:imagesdir: ../images/
 
 = REAPER notes
 
@@ -47,7 +48,7 @@ When doing effects/music for a video I want to hear the video, but not render it
 Instead of muting it every time, it can be routed directly to the HW output instead of Master.
 Whatever is not on the Master is not rendered (by default).
 
-image::images/reaper-video-track-no-master-routing.png[]
+image::reaper-video-track-no-master-routing.png[]
 
 1. Right-click on the level button (or route button if mixer is not displayed).
 2. Disable *Master send*.
@@ -67,7 +68,7 @@ when keyboard with better sensitivity/feeling is used.
 It is better to keep adjustments in a filter plugin that can be turned on and off.
 For this we can use JS MIDI CC Mapper X which can be installed via ReaPack.
 
-image::images/reaper-midi-cc-mapper-x-velocity-boost.png[]
+image::reaper-midi-cc-mapper-x-velocity-boost.png[]
 
 1. Insert the plugin before the instrument.
 2. Click on the *Vel* function.

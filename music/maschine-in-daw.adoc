@@ -1,3 +1,5 @@
+:imagesdir: ../images/
+
 = Using Maschine 2 as VSTi in DAW
 
 [TIP]
@@ -15,7 +17,7 @@ sound to the specific pitch that is required.)
 
 * Playing various sounds on various channels:
 +
-image::images/maschine-host-channel-for-sound.png[]
+image::maschine-host-channel-for-sound.png[]
 +
 1. Click on the sound to select it.
 2. Click on *Channel icon* on the left of the *Control area*.
@@ -27,7 +29,7 @@ image::images/maschine-host-channel-for-sound.png[]
 
 * Playing various sounds with various notes:
 +
-image::images/maschine-host-group-as-drumkit.png[]
+image::maschine-host-group-as-drumkit.png[]
 +
 1. Click on *Channel icon* on the left of the *Control area*.
 2. Click on *Input* in the *Channel Property selector*.
@@ -41,3 +43,9 @@ Now the keys from `C3` through `D#4` play the various sounds from the kit.
 If both *Sound* and *Group* settings are set simultaneously it can cause
 triggering multiple sounds.
 For *Drumkit* mode, change the *Source* for individual **Sound**s back to *Default*.
+
+Multiple kits on various MIDI channels:
+https://support.native-instruments.com/hc/en-us/articles/115005813489-Triggering-MASCHINE-2-Drum-Kits-with-MIDI-Notes-in-Ableton-Live
+
+Shortly - instead of *Key Mode* set to *Drumkit* switch it to *Manual* and set the *Channel*.
+Beware, the starting note will be octave lower, but otherwise it's the same - and it can be set.
