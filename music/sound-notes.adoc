@@ -20,3 +20,8 @@ toc::[]
 ** Kataklysm, Orchestral Sphere, Overtone Reverse
 ** Phosphorescence (long, squeaking, going down later)
 * Kinetic Metal (Alloy Cyclone, )
+
+== Strings and similar
+
+* *pianobook-MasterShakeCup-ClayLaHatte*, patch *Monks Drinking Shakes MW* has nice strings-like
+quality, but also beautiful shimmery high-pad and strong, dramatic lows

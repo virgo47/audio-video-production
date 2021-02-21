@@ -1,0 +1,40 @@
+= DaVinci Resolve Cheat Sheet
+
+== Edit page
+
+=== Navigation
+
+* `Up/Down` - previous/next clip
+* `V` - select nearest edit point (what's the difference from `Alt+E` for video edit point?)
+* `Shift+E` - select nearest audio edit point
+* `Q` - toggle focus between Source and Timeline viewer
+
+=== Selection
+
+* `Alt+Y` - *Select Clips Forward on All Tracks*
+* `I/O` - in/out points, both in various monitors and also timeline, `Alt+I/O` clears in/out.
+
+=== Transitions
+
+* `U` - change edit point type (left/both/right).
+* `Ctrl+T` add default transition; the default transition can be selected in *Effects Library*.
+
+=== Clip editing
+
+* `T` (Trim Edit Mode), then `drag` the clip in its upper half to "slip" the clip within its bounds,
+press `Shift` to see the playhead instead of start/stop/in/out points.
+* In ``T``rim edit mode it's also possible to trim start/end of the clip with automatic ripple.
+* `Ctrl+B` - razor (split clip at the playhead); because it's necessary to move playhead first
+it is actually faster to switch to blade tool `B`, click and switch back to selection mode `A`.
+* `Ctrl+R` - toggles *Retime Controls* for the clip, this allows speed changes (stretching).
+* `Shift+Del` - ripple delete.
+* `Backspace` - delete.
+
+=== Various
+
+* `N` - snapping on/off ("magnet" icon).
+* When dragging some edge (clip, transition) hold `Alt` to change just one of the linked items.
+
+== Missing shortcut?
+
+* *Trim | Fade In to Playhead*

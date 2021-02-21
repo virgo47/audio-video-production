@@ -1,0 +1,28 @@
+= DaVinci Resolve - personal project "standards"
+
+Or just ideas, or suggestions...
+
+== Used fonts, titles setup
+
+Some fonts are downloaded from https://fonts.google.com[Google Fonts], use
+https://github.com/virgo47/litterbin/blob/master/automation/WindowsSetup.adoc#installing-fonts[this procedure]
+to install them in one go.
+
+All used fonts are either from Windows or from Google Fonts with open licenses.
+
+* Normal text: Source Sans by default (OK also for all-caps but the following fonts are better)
+* All-caps titles: Alef, Josefin Sans, Poppins, Raleway, Reem Kufi, Rubik (Bold), Segoe UI, Trebuchet MS, Yu Gothic UI
+* Script/cursive: Ink Free, ...?
+
+Subtitle like titles setup:
+
+* *Text+* (which is Fusion Title)
+* Font: Source Sans Pro/Semibold
+* Size: 0.058
+* Tracking: 1.02
+* Line Spacing: 0.9
+* V Anchor: Bottom for bottom titles, Top for top titles
+* H Anchor: depending on the title position, e.g. Left for left title
+* Layout, Type: Point
+* Center X: 0.05/0.5/0.95 for left/center/right
+* Center Y: 0.07/0.5/0.93 for bottom/center/top

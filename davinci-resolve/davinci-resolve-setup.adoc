@@ -2,12 +2,6 @@
 
 = DaVinci Resolve Notes
 
-Video aspect ratio: 16:9
-Photos aspect ratio: 3:2
-
-If photo fits (matching height) with Transform Zoom = 1, then to fill the screen (matching width) the zoom must be:
-(16/3)/(9/2) = 1.185185... or 1.1852 or 1.186 or 1.19 for full coverage.
-
 == Directories organization
 
 Either backup default database from `%APPDATA%/Blackmagic Design/DaVinci Resolve/Support/Resolve Disk Database/Resolve Projects`
@@ -26,9 +20,18 @@ to something out of backed-up dirs, e.g. `C:\work\tmp\resolve-cache\project-back
 group *Working Folders* to values like `C:\work\tmp\resolve-cache\ProxyMedia`,
 `CacheClip` (not sure about this one yet) and `C:\work\tmp\resolve-cache\.gallery`.
 
-== TODO
+== Various tips
 
-How to hover above a map with rotation in place after translate?
+Not necessarily permanent setup, but handy to know:
+
+* *Timeline | Selection Follows Playhead*, still be careful with more clips in multiple tracks;
+also, this makes adding markers a pain as they are added to the clips and not to the timeline.
+* *Timeline | Ripple Timeline Markers*, whether the marker should move on ripple edits.
+Not that useful for audio cue (as presented somewhere), use clip marker for that.
+* *File | Project Notes*, opens simple note pad!
+* *Timeline | Clean Up Video Tracks | Flatten Unused Clips* to remove unnecessary clips.
+It's also possible to just disable the clips or change their color.
+
 
 == 3rd-party title packs
 
@@ -56,7 +59,7 @@ image:davinci-resolve-custom-fusion-titles-location.png[]
 
 1. You must go to *Fusion Page* first.
 2. Go to *Effects Library*.
-3. Choose *Edit Templates/Titles*
+3. Choose *Edit Templates | Titles*
 4. Locate the title of interest, right-click and click *Show Folder*.
 5. Folder with located title will open - in this case it's custom title under
 `ProgramData`.
@@ -90,7 +93,7 @@ Following picture summarizes the process (after download) - *you must be on the 
 image:davinci-resolve-custom-fusion-transition-installation.png[]
 
 1. Go to *Effects Library*.
-2. Choose *Edit Templates/Transitions*
+2. Choose *Edit Templates | Transitions*
 3. Unpack the assets, it can't be installed from inside the zip.
 4. Drag-and-drop the selected `*.settings` files to the right side of the *Effects Library*.
 
