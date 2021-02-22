@@ -20,6 +20,17 @@ to something out of backed-up dirs, e.g. `C:\work\tmp\resolve-cache\project-back
 group *Working Folders* to values like `C:\work\tmp\resolve-cache\ProxyMedia`,
 `CacheClip` (not sure about this one yet) and `C:\work\tmp\resolve-cache\.gallery`.
 
+=== Project assets
+
+TODO:
+
+* How to organize assets for a project?
+* How to easily move project and/or assets?
+
+Possible sources:
+
+* https://forum.blackmagicdesign.com/viewtopic.php?f=21&t=65045
+
 == Various tips
 
 Not necessarily permanent setup, but handy to know:
