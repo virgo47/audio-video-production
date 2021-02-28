@@ -1,0 +1,85 @@
+= Lightroom and Adobe Creative Cloud
+
+There are two versions of Lightroom:
+
+* *Lightroom* (also known as Lightroom CC for "Creative Cloud", also *Lr* in further text),
+simple, fast, reasonably powerful, working with photos in the cloud.
+Web and mobile versions are available.
+* *Lightroom Classic* (*LrC*) more powerful application for full desktop experience.
+
+[NOTE]
+While some notes are about Lr (CC), I want to focus on LrC (Classic) so don't stress Lr notes much.
+
+== Lightroom CC and the first experience
+
+First experience was very positive, mostly focused on Lr though.
+
+* Installation was as expected:
+** Register or logged in, I had an account from previous experiments with Bridge.
+** Choose a plan - I went for Photography plan because I wanted Lightroom Classic as well.
+** I entered credit card and other billing info.
+** Adobe Creative Cloud installed and then I tried Lr (cloud one) first.
+* I imported JPG photo from mobile phone in Lr and I could edit the exposure, shadows, etc.
+None of this is allowed in Canon DPP 4, not for JPGs, only for raw photos.
+* I wanted to see info, guessed `I` key and it showed info.
+I wanted to edit, tried `E` and edit panel showed up on the right.
+* I was a bit confused about changes to the picture - these are stored in the "catalog".
+For Lr this seems to be in the cloud, but you can quit the application without it saving the recent
+changes which can be unexpected.
+* Lr export (Shift+E) puts the images to `~/Pictures/Lightroom Saved Photos` by default which is OK.
+We don't want to override the originals.
+
+Now I liked the product, but there are things I didn't like and I hoped LrC doesn't do it that way:
+
+* Import copies the pictures, doesn't work in-place (I don't mean overwriting on export, of course).
+* Very few Preferences (`Ctrl+,`) options.
+* Too little control, too much cloud.
+This may be OK for working with mobile, but not for my very big existing photo library.
+
+== Lightroom Classic
+
+Keys work a bit differently here, `E` (Loupe) shows single picture in the *Library* module.
+`D` goes to *Develop* and is closer to edit in Lr.
+`G` for grid is the same in both.
+But `Shift+E` is Loupe (single picture) on the secondary display, export is `Ctrl+Shift+E` or
+`Ctrl+Alt+Shift+E` for *Export with Previous* (no dialog) - see section lower about Export profiles.
+
+=== Tips
+
+* Use `Left/Right` in *Develop* module (`D`), except when in *Crop Overlay* (`R`) where it moves
+the picture under/behind the frame (press `R` to toggle out of overlay again).
+* Use `\` in *Develop* module to toggle between the image version before and after edits.
+* Use `Space` to toggle the zoom.
+* Use `P` to pick pictures, e.g. for export or when selecting for video.
+`U` removes the flag - may be handy for all pictures in a folder before picking a new selection.
+* Later back in grid (`G`) show *Filter Bar* (`\`), choose *Attribute* and click the first flag
+to filter only flagged pictures.
+Now we can select them all (`Ctrl+A`) and export them in one step.
+Alternatively filter *Edited Photos Only* (also in *Attribute* filter) and export these.
+
+=== Export profiles
+
+It is possible to override JPG next to RAW easily, but working with presets is a bit unintuitive.
+You can add User Preset, but to change or rename it you have to right-click the preset and select
+the action from menu (no obvious buttons are available to do this any other way).
+*Do not left-click the preset* before right-clicking it as it changes the settings immediately.
+Scrolling in settings is difficult (jumps too much) so it's easy to skip *File settings* for
+JPEG quality.
+
+=== Things I like
+
+* Working with keywords was exactly what I expected.
+I can add keywords to many pictures, even in many folders at once while preserving existing keywords.
+There are *Keyword Suggestions* and list (*Keyword Set*) of recent keywords is also available.
+* I can right-click on some collapsible panel and hide it altogether.
+This way I removed *Categories* from the *Navigator* or *Quick Develop* from the right panel.
+
+=== Things I don't like
+
+Some of these may be from "I don't know how to yet" category.
+
+* I can't use selected pictures to copy their exported JPGs to file explorer or Total Commander.
+* I can't even drag-and-drop a single image in this way - for this I still want to use other
+programs like FastStone Image Viewer.
+I tried Adobe Bridge to see whether it helps me, e.g. by selecting all picked images, but this
+information is not shared between LrC and Bridge.
