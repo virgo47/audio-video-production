@@ -56,6 +56,12 @@ the picture under/behind the frame (press `R` to toggle out of overlay again).
 to filter only flagged pictures.
 Now we can select them all (`Ctrl+A`) and export them in one step.
 Alternatively filter *Edited Photos Only* (also in *Attribute* filter) and export these.
+* In *Crop Overlay* (`R`) toggle various grids/overlays with `O` (*Tool Overlay*).
+Use `Shift+O` for variations of asymmetric ones, like golden ratio spiral, etc.
+To toggle the *Tool Overlay* press `H` which is also the way how to turn it off (`O` will not).
+* For Loupe there is only simpler grid and/or guide overlay, toggle it with `Ctrl+Alt+O`.
+Configure while holding `Ctrl` and in the *View | Loupe Overlay* menu.
+* Use `J` to see where the black or white is clipping (shown in blue and red respectively).
 
 === Export profiles
 
@@ -68,18 +74,41 @@ JPEG quality.
 
 === Things I like
 
-* Working with keywords was exactly what I expected.
+* Working with keywords was exactly what I wanted and expected.
 I can add keywords to many pictures, even in many folders at once while preserving existing keywords.
 There are *Keyword Suggestions* and list (*Keyword Set*) of recent keywords is also available.
 * I can right-click on some collapsible panel and hide it altogether.
 This way I removed *Categories* from the *Navigator* or *Quick Develop* from the right panel.
+* Edits are fast and the whole UI is faster than Canon DPP 4.
+Side-panels are slower, but no real problem.
+* I liked export profiles and the workflow in overall, especially exporting many pictures at once.
+* History!
+Even when I select some former state and (right-click) *Clear History Above This Step* I can still
+undo this step and bring the old history back - this is just cool (redo undo?).
 
 === Things I don't like
 
-Some of these may be from "I don't know how to yet" category.
+Some of these may be from "I don't know how to yet" category, some are mere UX annoyances.
 
 * I can't use selected pictures to copy their exported JPGs to file explorer or Total Commander.
 * I can't even drag-and-drop a single image in this way - for this I still want to use other
 programs like FastStone Image Viewer.
 I tried Adobe Bridge to see whether it helps me, e.g. by selecting all picked images, but this
 information is not shared between LrC and Bridge.
+* Editing Metadata preset was a bit tricky at first, I thought I selected preset already and I'm
+editing that one - but you have to choose the preset in the dialog in the top select first.
+It really says *Edit Presets...* so one should expect it.
+Bigger problem was to apply the preset, it repeatedly didn't do anything although it said
+"Applying Preset ..." in the top left corner.
+After messing in the grid for a while and changing picture (that helped?) it started working.
+* Scrolling in dialogs with the mouse wheel is more like page up/down, it's easy to miss something
+on the edge of the viewport.
+* I'd like to see more info in Loupe Info Overlay (`I` to cycle, `Ctrl+I` to toggle).
+I know there is Metadata panel, but I can absorb (and often want to see) more information quick.
+* Keyboard shortcut inconsistency - e.g. `O` is for *People* view, but toggles overlay in *Crop Overlay*.
+I'd welcome it for overlay in *Library* views too, but it's `Ctrl+Alt+O` there.
+Although having faster shortcut for *People* is probably more practical.
+* Importing from the mobile phone is plain stupid - all the pictures from the phone, including various
+technical ones from applications, are included for import.
+There is no reasonable way how to choose just a folder from the phone where I want to import from.
+(Alternative is to use Lightroom CC, which also works as a photo shooting app, and sync it via cloud.)
