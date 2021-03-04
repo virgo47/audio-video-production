@@ -2,11 +2,14 @@
 
 Couple of tools are used for photo management:
 
-* *FastStone Image Viewer* - for viewing and importing images from the camera (replacing Canon's native offering).
-FastStone also offers couple of basic editing tools (scale, crop, rotation)
+* Lightroom Classic - viewing, management, corrections/editing and import from camera.
+* *FastStone Image Viewer* - for viewing and quick basic editing (scale, crop, rotation).
+Good alternative for importing pictures from the camera (better than Canon's native offering).
 * *XnView MP* - an alternative viewer with stronger management capabilities.
 It can edit XMP/IPTC metadata and keywords and use them for searches.
+Superseded by Lightroom Classic.
 * *Canon Digital Photo Professional* - raw file editor.
+Superseded by Lightroom Classic.
 * *exiftool* - command line tool for viewing and manipulating metadata.
 It can be used to add IPTC keywords to multiple files.
 
@@ -19,13 +22,3 @@ Services:
 * Amazon Photos:
 ** nice UI, can order by date/time taken,
 ** no caption support yet.
-
-== Downloading photos
-
-FastStone Image Viewer
-
-TODO: settings
-
-== Managing keywords
-
-XnViewMP, `Ctrl+I`

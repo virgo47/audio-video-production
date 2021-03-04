@@ -46,22 +46,49 @@ But `Shift+E` is Loupe (single picture) on the secondary display, export is `Ctr
 
 === Tips
 
-* Use `Left/Right` in *Develop* module (`D`), except when in *Crop Overlay* (`R`) where it moves
+Library tips:
+
+* Use `G` to see *Grid*, `E` for *Loupe* (one picture), `N` for *Survey* view and `O` for *People*.
+* Use `C` (*Compare*) to compare different pictures (unlike in develope when comparing edits).
+* Use `J` in *Grid* to toggle the grid view style - to see the filename, resolution and file type(s).
+* Use `\` to show *Filter Bar*,
+To see just picked pictures, choose *Attribute* and click the first flag.
+Alternatively filter *Edited Photos Only* (also in *Attribute* filter).
+* Use `Ctrl+A` to select all and `Ctrl+D` to select none.
+* For Loupe there is a simple grid and/or guide overlay, toggle it with `Ctrl+Alt+O`.
+Configure while holding `Ctrl` and in the *View | Loupe Overlay* menu.
+* Use `Ctrl+4` to quickly access/show *Metadata* panel (or fold it), or `Ctrl+2` for *Keywording*.
+
+Develop module (`D`) tips:
+
+* Use `Left/Right`, except when in *Crop Overlay* (`R`) where it moves
 the picture under/behind the frame (press `R` to toggle out of overlay again).
-* Use `\` in *Develop* module to toggle between the image version before and after edits.
-* Use `Space` to toggle the zoom.
-* Use `P` to pick pictures, e.g. for export or when selecting for video.
-`U` removes the flag - may be handy for all pictures in a folder before picking a new selection.
-* Later back in grid (`G`) show *Filter Bar* (`\`), choose *Attribute* and click the first flag
-to filter only flagged pictures.
-Now we can select them all (`Ctrl+A`) and export them in one step.
-Alternatively filter *Edited Photos Only* (also in *Attribute* filter) and export these.
+* Use `\` to toggle between the image version before and after edits.
+* Use various tools with single key - `W` for *White Balance* tool, `Q` for *Spot Removal*,
+`M` for *Gradient Filter*, `Shift+M` for *Radial Filter* and `K` for *Adjustment Brush*.
 * In *Crop Overlay* (`R`) toggle various grids/overlays with `O` (*Tool Overlay*).
 Use `Shift+O` for variations of asymmetric ones, like golden ratio spiral, etc.
 To toggle the *Tool Overlay* press `H` which is also the way how to turn it off (`O` will not).
-* For Loupe there is only simpler grid and/or guide overlay, toggle it with `Ctrl+Alt+O`.
-Configure while holding `Ctrl` and in the *View | Loupe Overlay* menu.
 * Use `J` to see where the black or white is clipping (shown in blue and red respectively).
+* Use `Arrows` and `Shift+Arrows` to change values of selected slider (more with `Shift`).
+For this the slider must be clicked first, it's not enough to just select the parameter.
+If not, next/previous photo is selected (or selection expanded with `Shift`).
+(This is probably not reliable enough to bother with in general.)
+* Use `.` and `,` to select another parameter from *Basic* settings.
+Then use `Plus`/`Minus` to change the value.
+* Use `Ctrl+1` to quickly access/show *Basic* panel (or fold it).
+
+Other/common tips (many work in both Library and Develop modules):
+
+* Use `Ctrl+Plus/Minus` to zoom-in/out regardless of the tool.
+* Use `Z` to toggle between the last zoom and zoom-to-fit.
+* `Space` seems to do the same but does not work in many tools (where it provides hand tool).
+There seems to be no way to zoom in *Crop* tool.
+* When zoomed use hand tool or *Navigator* (top left panel) to move around the picture.
+Hand is the default normally, but when in another tool hold `Space` to activate the hand tool.
+* Use `P` to pick pictures, e.g. for export or when selecting for video.
+`U` removes the flag - may be handy for all pictures in a folder before picking a new selection.
+* Use `Ctrl+U` to apply *Auto Settings* (Auto tone) or `Ctrl+Shift+U` for *Auto White Balance*.
 
 === Export profiles
 
@@ -81,6 +108,7 @@ There are *Keyword Suggestions* and list (*Keyword Set*) of recent keywords is a
 This way I removed *Categories* from the *Navigator* or *Quick Develop* from the right panel.
 * Edits are fast and the whole UI is faster than Canon DPP 4.
 Side-panels are slower, but no real problem.
+(It gets very slow when doing long-running task like face indexing, but that's not common.)
 * I liked export profiles and the workflow in overall, especially exporting many pictures at once.
 * History!
 Even when I select some former state and (right-click) *Clear History Above This Step* I can still
@@ -108,7 +136,20 @@ I know there is Metadata panel, but I can absorb (and often want to see) more in
 * Keyboard shortcut inconsistency - e.g. `O` is for *People* view, but toggles overlay in *Crop Overlay*.
 I'd welcome it for overlay in *Library* views too, but it's `Ctrl+Alt+O` there.
 Although having faster shortcut for *People* is probably more practical.
+Another example is `Space` - why it provides hand tool for various tool overlays while normally
+toggling the zoom level is hard to understand.
+* Working with faces (*People*) is painfully slow.
 * Importing from the mobile phone is plain stupid - all the pictures from the phone, including various
 technical ones from applications, are included for import.
 There is no reasonable way how to choose just a folder from the phone where I want to import from.
 (Alternative is to use Lightroom CC, which also works as a photo shooting app, and sync it via cloud.)
+* Pictures edited in Canon DPP 4 have no edits in LrC.
+It's not a big deal for me as I didn't use any sophisticated edits, but there is now difference
+between RAW/DNG and its JPG export right next to it.
+* Not sure about Undo, but it also contains things like changing picture or selection, etc.
+This is handy in some cases, but it also means that undo does not work strictly with the history
+of the current picture and I have to use mouse to undo things there if I don't want to change
+selection or module accidentally.
+* Editing capture time is just pain, `Tab` doesn't work as expected (use `Arrow` which is far from
+the alphanumeric keyboard), plenty of mouse clicking necessary and it often sets a bit different
+time for some selected pictures (reasons unknown).

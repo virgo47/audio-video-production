@@ -169,6 +169,17 @@ exiftool.exe out.mp4
 
 * This output is not as rich as the original (134 items, original had 245), but everything important is there.
 
+[IMPORTANT]
+====
+To support files larger than 4 GB with ExifTool the following must be in `~/.ExifTool_config`:
+
+----
+%Image::ExifTool::UserDefined::Options = (
+    LargeFileSupport => 1,
+);
+----
+====
+
 == Audio conversion
 
 To OGG Q7 (`anything-to-ogg-44k1-q7.sh`):
