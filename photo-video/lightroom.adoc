@@ -43,6 +43,7 @@ Keys work a bit differently here, `E` (Loupe) shows single picture in the *Libra
 `G` for grid is the same in both.
 But `Shift+E` is Loupe (single picture) on the secondary display, export is `Ctrl+Shift+E` or
 `Ctrl+Alt+Shift+E` for *Export with Previous* (no dialog) - see section lower about Export profiles.
+Be careful not to press just `Ctrl+E` as it starts Photoshop (Ps) to edit the picture.
 
 === Tips
 
@@ -90,6 +91,21 @@ Hand is the default normally, but when in another tool hold `Space` to activate 
 `U` removes the flag - may be handy for all pictures in a folder before picking a new selection.
 * Use `Ctrl+U` to apply *Auto Settings* (Auto tone) or `Ctrl+Shift+U` for *Auto White Balance*.
 
+General tips:
+
+* *Auto tone* `Ctrl+U` works very well as a starting point for further edits, but it's good
+to pay attention to a few things that can go worse:
+** Perceivable chromatic aberration (CA) can worsen when light blue sky gets darker.
+CA cyan fringing can turn into strong violet one.
+** Sharpening (*Details* section `Ctrl+5` in *Develop* module) in general works well and typically
+removes color noise, but more noise can appear in previously dark areas.
+*Luminance* can be used to supress this but often at a price of some contrast and texture.
+
+=== Import profiles
+
+TODO: rename, metadata, lens+CA, auto tone(?)
+DNG preview size?
+
 === Export profiles
 
 It is possible to override JPG next to RAW easily, but working with presets is a bit unintuitive.
@@ -98,6 +114,34 @@ the action from menu (no obvious buttons are available to do this any other way)
 *Do not left-click the preset* before right-clicking it as it changes the settings immediately.
 Scrolling in settings is difficult (jumps too much) so it's easy to skip *File settings* for
 JPEG quality.
+
+==== Lightroom JPG quality vs file JPG quality
+
+Lightroom uses a different JPG quality metric than other software, e.g. `magick`.
+To see the quality of the file use this command (from ImageMagick package):
+
+----
+magick identify -verbose <file> | grep Quality
+----
+
+The following table shows the comparison and the resulting file sizes:
+
+|===
+| LrC quality | JPEG file | File size (DNG %)
+
+| Original DNG | | 30M (100%)
+| 99 = 100 (exported file is really the same) | 99 | 24M (81%)
+| 90 | 96 | 16M (52%)
+| 80 | 94 | 11M (37%)
+| 70 | 92 | 8.3M (28%)
+| 60 | 90 | 5.0M (17%)
+| 0 | 78 | 1.8M (6%)
+|===
+
+This means that even with 0 in Lightroom export settings the picture is still watchable zoomed out.
+There is really little difference for pictures between 60 and 99 Lr quality and 60 is still usable.
+
+There is also a very thorough http://regex.info/blog/lightroom-goodies/jpeg-quality[explanation here].
 
 === Things I like
 
