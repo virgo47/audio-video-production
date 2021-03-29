@@ -12,6 +12,10 @@ endif::[]
 
 toc::[]
 
+== Tricks
+
+* Use octave lower sine wave under strings for bass.
+
 == Long, effects
 
 * Ethereal Earth - Frost Drone

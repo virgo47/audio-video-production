@@ -90,6 +90,10 @@ Hand is the default normally, but when in another tool hold `Space` to activate 
 * Use `P` to pick pictures, e.g. for export or when selecting for video.
 `U` removes the flag - may be handy for all pictures in a folder before picking a new selection.
 * Use `Ctrl+U` to apply *Auto Settings* (Auto tone) or `Ctrl+Shift+U` for *Auto White Balance*.
+* Use `Ctrl+Shift+R` to reset "develop" photo settings, good to start from scratch.
+* Use `Alt` to reveal *Reset Tone* and other section reset options instead of their titles.
+* Double-click on a single control/slider title to reset it.
+* Click on the slider to change the value there, double-click on the handle to return it back.
 
 General tips:
 
@@ -99,7 +103,18 @@ to pay attention to a few things that can go worse:
 CA cyan fringing can turn into strong violet one.
 ** Sharpening (*Details* section `Ctrl+5` in *Develop* module) in general works well and typically
 removes color noise, but more noise can appear in previously dark areas.
-*Luminance* can be used to supress this but often at a price of some contrast and texture.
+*Luminance* can be used to suppress this but often at a price of some contrast and texture.
+* In some situations *Dehaze* (from *Basic* panel `Ctrl+1`) is useful to bring blue sky and clouds
+back if overexposed a bit, especially in combination with *Highights*/*White* adjustments.
+* Don't combine many changes in a single preset if there may be a need to undo one of them later.
+E.g. if *Lens + CA Correction* is combined with Auto Settings for tone it will be a single step
+in the History and can be undone only as a whole.
+* Apply basic changes first, e.g. start with *Lens + CA Correction*.
+This can be achieved from *Library* panel *Quick Develop* (`Ctrl+1`), click on *Saved Preset*
+dropdown, find *Optics* submenu and choose *Lens + CA Correction*.
+* Apply *Metadata* custom preset *Copyright* for all old pictures without it.
+Don't forget to actually select them all (`Ctrl+A`), clicking on a library folder is not enough.
+* `Ctrl+L` toggles library filters in both Library and Develop (for filmstrip) modes.
 
 === Import profiles
 
@@ -197,3 +212,5 @@ selection or module accidentally.
 * Editing capture time is just pain, `Tab` doesn't work as expected (use `Arrow` which is far from
 the alphanumeric keyboard), plenty of mouse clicking necessary and it often sets a bit different
 time for some selected pictures (reasons unknown).
+* When editing *Caption* in *Metadata* (`Ctrl+4` in *Library* module) I can't use `Ctrl+Left/Right`
+to skip words as it goes to previous/next selected photo instead (not only during caption edit).
