@@ -1,0 +1,29 @@
+= Large pictures of maps from web
+
+== Saving the map in JPG
+
+* Responsive Design Mode (`Ctrl+Shift+M`) or Firefox dev mode (`F12`), then click the right icon, but with `Ctrl+Shift+M` there's no need for Dev-mode.
+* Set size to 3100x2100 (+100 on each side for later crop to remove tools on the edges.
+* DPR: 1, otherwise the screenshot has higher size (multiple of DPR, also the rendering is not better at all).
+* Load the map, e.g. using a short link like: https://en.mapy.cz/s/gumakakoje
+* Hide the side panel on the right (scroll right if needed).
+* Choose the appropriate orientation, possibly go for square 3100x3100 if really needed.
+* Center the scroll bars first.
+* Center the map, zoom appropriately, it can be zoomed, to go out of visible part,
+check it with scrollbars again.
+(Is it possible to scroll faster? Wheel is zooming at that moment.)
+* Make screenshot (icon on the right), check it, reposition/rezoom/repeat as necessary.
+* For a single picture: crop the final image to 3000x2000 (adjust to orientation, or 3000x3000 if square).
+* Open the picture (PNG), save it as `snp-mapa-xy.jpg` using FastStone Viewer.
+
+== With multiple pictures use batch convert in FastStone Viewer
+
+* Choose all the relevant pictures in browser mode.
+* Press `F3` for *Batch Image Convert / Rename*, tab *Batch Convert*.
+* Select *Output Folder*, just use *out* (relative path).
+* Click button *Advanced Options*, chose tab *Crop* (uncheck *Resize* on *Resize* tab if it has green bullet).
+* Check *Crop*, choose *In Pixels*, 3000x2000 (-50px on all four sides from the original).
+* Leave *Switch Width and Height to match long sides* and *Lossless Crop...* checked.
+* No need for *Specify X-Y Coordinate*, the crop will recenter automatically.
+* Finish *Advances Options* setup with *OK*.
+* Press *Convert* button.

@@ -83,3 +83,8 @@ It will always adjust the shape based on the parameters after you click the shap
 === Preferences changes
 
 * In *Mouse editing behavior* disable *Mouse click/edit in track view changes track selection*.
+
+=== Handy extensions
+
+* Must-have extension with tons of actions: https://www.sws-extension.org/[SWS/S&M Extension]
+* https://stash.reaper.fm/v/39748/pandabot_ChordGun.lua[Chord gun] - https://youtu.be/-v5oE79NJMg[video here].
