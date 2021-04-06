@@ -1,0 +1,67 @@
+= REAPER MIDI
+
+Custom keys:
+
+* `F1`/`F2`: Show all note rows / Hide unused and unnamed note rows (to name the note use double-right-click).
+* midi notes entering + grid changes TODO + TODO details lower
+
+== Using single editor
+
+* In *Preferences* (`Ctrl+P`) change the following options (all this can also be set from contextual
+menu in the MIDI editor's *Track List*):
+** Default shape for CC segments: *Bezier* and check *Reduce CC events when drawing*
+** Optionally *Prevent mouse edits of single CC events from moving past other events*
+** One MIDI editor per *project* is good enough with a few more option changes.
+** Behavior for "open items in built-in MIDI editor": *Open all selected MIDI items*
+** Check *Active MIDI item follows selection changes in arrange view*
+** Check *Media item selection is linked to visibility*
+** Check *Selection is linked to editability*
+** Check *Close editor when the active item is deleted in arrange view* (non-essential though)
+
+* See https://youtu.be/7tmm7jGfUII[this video] (Working with Multiple MIDI Items in Reaper) for
+many tips:
+** Toggle *Track list* to on for better navigation and control over what is visible in a single editor.
+** Media item lane was a bit tougher, it was not available in REAPER 6 default toolbar, but it is
+possible to add it via right-click, *Customize toolbar...*, then use *Add...* button down left to
+add the action *Contents: Show/hide media item lane* (from section *MIDI Editor*).
+It should have a proper icon by default, optionally change the title to *Item Lane*,
+move it behind *Track List* icon.
+Finally, *Save* the toolbar.
+*** How to scroll vertically with scroll-wheel in the lane? I don't know yet.
+Scrolling with `Alt+Ctrl` scrolls the piano roll.
+** To completely hide tracks from *Item Lane* (as show in the video) tracks need to be organized
+in folders and there must be more than just one of them (one does)
+
+* For switching between full-screen MIDI editor and arranger on the same monitor one can use
+*View: Toggle show MIDI editor windows* action and map it to `Ctrl+Tab` (or other if you need
+default transient action assignment).
+This is super practical and works reliably, while SWS actions for focusing next window pop up
+Toolbar Docker window and gets stuck there.
+
+[WARNING]
+A missing feature probably, but selecting track (or its item) from the *Track List* in the MIDI editor *does not* select the track in arranger window (TCP).
+So this doesn't play nicely with auto-arm setup because you can hear a different
+instrument when playing MIDI keyboard, even when step-sequencing another.
+
+== MIDI notes editing
+
+https://youtu.be/pVuOHgOyp0Q
+
+https://www.reddit.com/r/Reaper/comments/lgwg7j/any_tips_for_optimizing_the_piano_roll_editor/?utm_source=share&utm_medium=web2x&context=3
+
+
+
+== Working with CC lanes (automation)
+
+TODO - mouse-click modifiers, curve shape
+
+== Resources
+
+Videos from https://www.youtube.com/channel/UC39aOXMqg48qpzEz1l_-7tQ[The REAPER Blog]:
+
+* https://youtu.be/aLJUStOndZ8[Smooth MIDI CC Automation in REAPER 6]
+*
+
+And also:
+
+* https://youtu.be/7tmm7jGfUII[Working with Multiple MIDI Items in Reaper]

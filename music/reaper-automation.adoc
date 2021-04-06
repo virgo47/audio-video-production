@@ -1,5 +1,12 @@
 = Reaper Automation
 
+[NOTE]
+Whenever practical, prefer MIDI automation (CC).
+There are few downsides, e.g. no reduce points function like in envelope automation,
+but otherwise it's much easier to record and work with it later compared
+to rather complicated automation modes.
+See link:reaper-midi.adoc[REAPER MIDI] for more.
+
 == Using Komplete Kontrol
 
 To use Komplete Kontrol M32 keyboard and Komplete Kontrol (KK) plugin:
