@@ -16,6 +16,17 @@ check it with scrollbars again.
 * For a single picture: crop the final image to 3000x2000 (adjust to orientation, or 3000x3000 if square).
 * Open the picture (PNG), save it as `snp-mapa-xy.jpg` using FastStone Viewer.
 
+== Cropping with `magick`
+
+This is very easy as we can specify how much to crop from each border with two `-crop` options:
+
+----
+magick input.png -crop +50+50 -crop -50-50 output.jpg
+----
+
+There is no need to watch the picture size this way it trims it the same way for any size.
+It's OK to save as JPG file and the result is much smaller, the default quality is very good.
+
 == With multiple pictures use batch convert in FastStone Viewer
 
 * Choose all the relevant pictures in browser mode.
