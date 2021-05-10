@@ -4,11 +4,17 @@
 
 == Fitting photo
 
-Video aspect ratio: 16:9
-Photos aspect ratio: 3:2
+Use *Project Settings | Image Scaling | Input Scaling* is set to *Scale full frame with crop* for easy working with photos.
+
+In some projects *Center crop with no resizing* can be useful too.
+
+This stuff applies if *Project Settings | Image Scaling | Input Scaling* is set to *Scale entire image to fit*:
+
+* Video aspect ratio: 16:9
+* Photos aspect ratio: 3:2
 
 If photo fits (matching height) with Transform Zoom = 1, then to fill the screen (matching width) the zoom must be:
-(16/3)/(9/2) = 1.185185... or 1.1852 or 1.186 or 1.19 for full coverage.
+(16/3) / (9/2) = 1.185185... or 1.1852 or 1.186 or 1.19 for full coverage.
 
 == TODO
 
