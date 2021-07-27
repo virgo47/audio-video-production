@@ -15,6 +15,15 @@ toc::[]
 
 == Project settings
 
+See this after fresh installation: https://youtu.be/u5GU3mwJf2E[Fresh Start: REAPER 6 Settings - Part 1],
+https://youtu.be/ltwXdtPRgZk[Part 2] and https://youtu.be/56Fv7epFkXQ[Part 3]
+
+Additional, not mentioned:
+
+* Open *Preferences* with `Ctrl+P`, *Editing Behavior* and change *Horizontal zoom center*
+to *Mouse cursor* and (less critical) *Vertical zoom center* to *Track under mouse cursor*.
+Both works great also for MIDI editor.
+
 To keep items time-based instead of BPM (so we can change BPM without stretching audio):
 
 * Open *Project Settings* with `Alt+Enter`.

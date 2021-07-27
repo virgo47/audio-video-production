@@ -2,7 +2,11 @@
 
 Custom keys:
 
-* `F1`/`F2`: Show all note rows / Hide unused and unnamed note rows (to name the note use double-right-click).
+* `F1`: Toggle show MIDI editor windows
+* `F2`/`F3`: Show all note rows / Hide unused and unnamed note rows (to name the note use double-right-click).
+* `F4`: Toggle snap to grid
+* `S`: Toggle step sequencing
+* `F12`: Send all notes off to all MIDI outputs/plug-ins
 * midi notes entering + grid changes TODO + TODO details lower
 
 == Using single editor
@@ -33,8 +37,7 @@ Scrolling with `Alt+Ctrl` scrolls the piano roll.
 in folders and there must be more than just one of them (one does)
 
 * For switching between full-screen MIDI editor and arranger on the same monitor one can use
-*View: Toggle show MIDI editor windows* action and map it to `Ctrl+Tab` (or other if you need
-default transient action assignment).
+*View: Toggle show MIDI editor windows* action and map it to `F1`.
 This is super practical and works reliably, while SWS actions for focusing next window pop up
 Toolbar Docker window and gets stuck there.
 
