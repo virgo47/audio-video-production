@@ -12,7 +12,7 @@ See link:reaper-midi.adoc[REAPER MIDI] for more.
 To use Komplete Kontrol M32 keyboard and Komplete Kontrol (KK) plugin:
 
 * The plugin has to be active (open in a window), otherwise its parameters don't react.
-(This may be ReaControl limitation.)
+(This may be ReaKontrol limitation.)
 * Keyboard has to be set to *Plug-in* mode, not Track/Instance.
 * Check that parameters of the instrument in KK can be controlled by the keyboard.
 * *Latch* automation mode must be used, *Touch* returns to original value after a short time without change.
