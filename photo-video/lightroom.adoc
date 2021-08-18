@@ -50,7 +50,7 @@ Be careful not to press just `Ctrl+E` as it starts Photoshop (Ps) to edit the pi
 Library tips:
 
 * Use `G` to see *Grid*, `E` for *Loupe* (one picture), `N` for *Survey* view and `O` for *People*.
-* Use `C` (*Compare*) to compare different pictures (unlike in develope when comparing edits).
+* Use `C` (*Compare*) to compare different pictures (unlike in develop when comparing edits).
 * Use `J` in *Grid* to toggle the grid view style - to see the filename, resolution and file type(s).
 * Use `\` to show *Filter Bar*,
 To see just picked pictures, choose *Attribute* and click the first flag.

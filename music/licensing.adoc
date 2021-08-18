@@ -1,0 +1,13 @@
+= Licensing
+
+How easy is it to use various products based on licensing strategies used by various companies?
+
+|====
+| Company | Typical products/pros | Manager app | Problems/cons
+
+| Native Instruments | Kontakt, Komplete, Maschine | Native Access | 2 computers, few problems
+| Spitfire Audio | Albion, BBC Orchestra, LABS | Spitfire Audio application | proprietary/own, red !, LABS forgetting the instruments, buggy, 2 computers allowed
+| Arturia | Analog Labs | Arturia Software Center | 5 computers allowed
+| Slate Digital | Fresh Air and more plugins | Slate Digital Connect | iLok required
+| iZotope | Ozone (Elements) | nothing, just download the plugins | no problems
+|====

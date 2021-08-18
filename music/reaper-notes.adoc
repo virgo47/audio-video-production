@@ -18,6 +18,16 @@ toc::[]
 See this after fresh installation: https://youtu.be/u5GU3mwJf2E[Fresh Start: REAPER 6 Settings - Part 1],
 https://youtu.be/ltwXdtPRgZk[Part 2] and https://youtu.be/56Fv7epFkXQ[Part 3]
 
+Perhaps most important change in zoom/scroll behavior:
+
+* Open *Actions* (`?`) and redefine following actions (old assignments can be deleted):
+** *View: Scroll vertically (MIDI CC relative/mousewheel)* - just `Mousewheel`
+** *View: Scroll horizontally (MIDI CC relative/mousewheel)* - `Alt+Mousewheel` (this may be default)
+** *View: Adjust horizontal zoom (MIDI CC/OSC only)* - `Ctrl+Mousewheel`
+** *View: Zoom vertically (MIDI CC relative/mousewheel)* - `Ctrl+Shift+Mousewheel`
+
+Repeat the same in *MIDI Editor* section (action names are a bit different).
+
 Additional, not mentioned:
 
 * Open *Preferences* with `Ctrl+P`, *Editing Behavior* and change *Horizontal zoom center*
