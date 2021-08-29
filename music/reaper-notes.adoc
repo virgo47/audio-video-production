@@ -13,7 +13,7 @@ endif::[]
 
 toc::[]
 
-== Project settings
+== Settings, Preferences
 
 See this after fresh installation: https://youtu.be/u5GU3mwJf2E[Fresh Start: REAPER 6 Settings - Part 1],
 https://youtu.be/ltwXdtPRgZk[Part 2] and https://youtu.be/56Fv7epFkXQ[Part 3]
@@ -33,6 +33,32 @@ Additional, not mentioned:
 * Open *Preferences* with `Ctrl+P`, *Editing Behavior* and change *Horizontal zoom center*
 to *Mouse cursor* and (less critical) *Vertical zoom center* to *Track under mouse cursor*.
 Both works great also for MIDI editor.
+
+=== Custom keyboard shortcuts
+
+* `Q` - *Track: Unsolo all tracks*
+* `I` - *Time selection: Set start point* ("in-point")
+* `O` - *Time selection: Set end point* ("out-point")
+* `Ctrl+Alt+Shift+Mousewheel` - single track/lane zoom under cursor; *SWS/wol: Adjust envelope or track height under mouse cursor, zoom center to mouse cursor (MIDI CC relative/mousewheel)*
+
+==== FX status, freezing
+
+* `Shift+B` - *Xenakios/SWS: Bypass FX of selected tracks* - this bypasses the FX chain, not each FX in the chain (which is what similar *SWS/S&M* action does and is less practical).
+This means that plugins individual bypass/offline state is preserved.
+* `Shift+U` - *Xenakios/SWS: Unbypass FX of selected tracks* - as the whole chain is switched, previously bypassed or offline plugins are still in that state.
+* `Shift+F5` - *View: Show track freeze details*
+* `Shift+F6` - *Track: Freeze to multichannel (render pre-fader, save/remove items and online FX)*
+* `Shift+F7` - *Track: Unfreeze tracks (restore previously saved items and FX)*
+* `F5` - *Track: Set all FX online for selected tracks*
+* `F6` - *View: Show monitoring FX chain*
+* `F7` - *Track: View FX chain for master track*
+* `F8` - *Track: View FX chain for current/last touched track*
+
+==== Other
+
+* `\` - Toggle metronome
+
+== Project settings
 
 To keep items time-based instead of BPM (so we can change BPM without stretching audio):
 
@@ -98,10 +124,6 @@ image::reaper-midi-cc-mapper-x-velocity-boost.png[]
 7. Then click on the curve and it will display it in the pane on the left.
 It will always adjust the shape based on the parameters after you click the shape.
 8. Finally, save the preset.
-
-=== Preferences changes
-
-* In *Mouse editing behavior* disable *Mouse click/edit in track view changes track selection*.
 
 === Handy extensions
 

@@ -7,7 +7,7 @@ Custom keys:
 * `F4`: Toggle snap to grid
 * `S`: Toggle step sequencing
 * `F12`: Send all notes off to all MIDI outputs/plug-ins
-* midi notes entering + grid changes TODO + TODO details lower
+* midi notes entering + grid changes TODO + TODO details lower `1`, `2`, `3` for grid changes
 
 * `Ctrl+L`: *Set note ends to start of next note (legato)* - good for key switches, select their MIDI notes and use this to have the appropriate articulation active anywhere the play starts.
 
