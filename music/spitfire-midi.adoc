@@ -1,0 +1,33 @@
+= Spitfire MIDI CC
+
+Based on https://spitfireaudio.zendesk.com/hc/en-us/articles/360013834018-MIDI-CC-Chart-for-Spitfire-Audio-Libraries[this page]
+with added information as used by their other libraries.
+
+|===
+| MIDI CC | Channel Name | Description
+
+| 1 | Modulation (Dynamics) | Allows for fading between dynamic layers on Long patches.
+| 7 | Volume | The overall volume of the plugin.
+| 10 | Pan | The overall pan of the plugin.
+| 11 | Expression | The overall volume of the samples (separate to plugin volume)
+| 16 | Speed / Tightness
+| Speed allows for control over Legato intervals in Libraries such as Spitfire Symphony Orchestra.
+In older Libraries, this CC number can also be Tightness (see below).
+| 17 | Release | Increases the release time of samples.
+Only applicable to libraries that have the Release parameter.
+| 18 | Tightness | Control how tight notes are played in Short techniques.
+Only applicable to libraries that have the Tightness parameter.
+| 19 | Reverb | Controls the amount of Reverb.
+Only applicable to Spitfire Plugin libraries.
+| 20 | Delay / Variation |
+Variation in LABS
+| 21 | Vibrato / Variation | The amount of Vibrato an instrument patch has.
+Vibrato is how much a note's pitch is pulsated by the player to create an expressive effect.
+
+Variation in Hainbach.
+| 22 - 27 | Microphone Signals | Varies depending on Library.
+| 64 | Sustain | Notes are suspended until pedal is released (0 = Off, 127 = On).
+| 93 | Distortion | E.g. Hainbach, Pool Project
+| 94 | Attack |
+
+|===
