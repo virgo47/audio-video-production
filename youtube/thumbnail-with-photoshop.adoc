@@ -1,0 +1,20 @@
+= YouTube thumbnail with Photoshop
+:toc:
+
+Good tutorials:
+
+* https://youtu.be/04_NF-51Sec
+
+== Photoshop shortcuts
+
+* Zoom with `Ctrl`+`+`/`-` or with `Alt+Mousewheel`
+* Toggle guides with `Ctrl+H`
+* Move tool `V`
+* `Space` + drag for moving around the view (when zoomed), this is similar to Lightroom.
+* Transform `Ctrl+T`, hold `Shift` to change the aspect as well
+
+
+== Thumbnail size
+
+YouTube recommends 16:9 aspect and 1280x720px resolution.
+It is possible to use full HD 1920x1080px resolution, as long as the exported picture is under 2 MB.
