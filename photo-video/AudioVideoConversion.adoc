@@ -18,6 +18,26 @@ location* and 2 is *category*;
 See more about exiftool https://exiftool.org/exiftool_pod.html[options]
 or https://exiftool.org/faq.html[FAQ]
 
+== FFmpeg and HW acceleration
+
+FFmpeg in ImageMagick has NVENC and similar acceleration enabled, but:
+
+* You should check the quality and compare it with non-accelerated video before routine use.
+* The acceleration speeds things massively, but it's not enabled by default.
+There is no post-compilation configuration file, so everything must be added to the command line.
+** This means using `-hwaccel cuda` before input - which brings massive speed-up.
+** Before output use `-c:v h264_nvenc`, possibly with more options, check https://trac.ffmpeg.org/wiki/HWAccelIntro#CUDANVENCNVDEC[the docs].
+* Tune the quality settings, compare with settings and output for non-accelerated video.
+
+TODO: Create a bash function instead of `ff` alias to make it automatic?
+
+Also see:
+----
+ff -codecs | grep 264
+ff -encoders | grep 264
+ff -h encoder=h264_nvenc
+----
+
 == Quick overview of video metadata
 
 To quickly see FPS and lenses used for videos during the day use:
