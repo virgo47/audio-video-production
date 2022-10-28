@@ -10,11 +10,12 @@ Clicking the clip once selects it, double-click focuses the Source viewer.
 
 === Navigation
 
-* `Up/Down` - previous/next clip
+* `E/D` - previous/next clip (default `Up/Down`)
 * `Q` - toggle focus between Source and Timeline viewer
-* NumPad keys for playhead positioning, either absolute or with `+`/`-` in a relative way.
-`Enter` for confirmation, `.` stands for `00` when entering.
-(Is this buggy? Reportedly one should not need to click to the timecode field, but )
+* NumPad keys for the playhead positioning, either absolute or with `+`/`-` in a relative way.
+`Enter` for confirmation, `.` stands for `00` when entering, `:` can be also used, e.g. `100` and `1:00` or just `1:` all means 1s.
+This requires custom keybind for `Num+`/`-` in recent Resolve versions.
+Also, with selected clips it moves these instead of the playhead.
 
 === Selection
 

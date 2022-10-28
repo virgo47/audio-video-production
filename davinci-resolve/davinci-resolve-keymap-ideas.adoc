@@ -1,0 +1,104 @@
+= DaVinci Resolve keymap ideas
+
+I like the idea of keeping the left hand on th keyboard and focus most stuff around it.
+One can use additional control surface (e.g. Touch Portal) but it's not that tactile anyway.
+
+https://youtu.be/je1z8K34-8g[This video] follows the idea, although focusing around WASD instead of more touch-typist-friendly ESDF.
+The keymap used there:
+
+----
+Custom Keyboard Shortcuts:
+
+Previous Clip/Edit = W (Arrow up)
+Next Clip/Edit = S (Arrow down)
+Step One Frame Reverse = A (Arrow left)
+Step One Frame Forward = D (Arrow right)
+Zoom Out = Q (Ctrl--)
+Zoom In = E (Ctrl-=)
+Delete Selected = R (Backspace)
+Change Clip Speed = T (R)
+Append to End of Timeline = Z (Shift-F12)
+Add Marker = X (M)
+Split Clip = C (Control-\)
+Cinema Viewer = V (P)
+Select Clips Forward On This Track = F (Y)
+Select Clips Backward On This Track = B (Ctrl-Y)
+Nudge One Frame Left = G (,)
+Nudge One Frame Right = H (.)
+Select Nearest Clip/Gap = Y (Shift-V)
+Play Reverse = J (J)
+Stop = K (K)
+Play Forward = L (L)
+Set Mark In = I (I)
+Set Mark Out = O (O)
+Clear Mark In & Mark Out = U (Alt-X)
+Go to Timeline Start = Home (Home)
+Go to Timeline End = End (End)
+Pause/Start Playback = Space (Space)
+Undo = ` (`)
+Normal Edit Mode = 1 (A)
+Trim Mode = 2 (T)
+Dynamic Trim Mode = 3 (W)
+Blade Edit Mode = 4 (B)
+Snapping On/Off = F3 (N)
+Linked Selection On/Off = F4 (Ctrl-Shift-L)
+Decrease Audio Level 1db = - (Ctrl-Alt--)
+Increase Audio Level 1db = + (Ctrl-Alt-=)
+Previous Keyframe = [ ([)
+Next Keyframe = ] (])
+Play Around Current Selection = / (/)
+Previous Marker = Shift-W (Shift-Arrow up)
+Next Marker = Shift-S (Shift-Arrow down)
+Step One Second Reverse = Shift-A (Shift-Arrow left)
+Step One Second Forward = Shift-D (Shift-Arrow right)
+Ripple Start to Playhead = Shift-Q (Ctrl-Shift-[)
+Ripple End to Playhead = Shift-E (Ctrl-Shift-])
+Ripple Delete = Shift-R (Delete)
+Freeze Frame = Shift-T (Shift-R)
+Zoom To Fit = Shift-Z (Shift-Z)
+Modify Marker = Shift-X (Shift-M)
+Razor = Shift-C (Ctrl-B)
+Source/Timeline Viewer = Shift-V (Q)
+Select Clips Forward On All Tracks = Shift-F (Alt-Y)
+Select Clips Backward On All Tracks = Shift-B (Ctrl-Alt-Y)
+Swap Clips Towards Left = Shift-G (Ctrl-Shift-,)
+Swap Clips Towards Right = Shift-H (Ctrl-Shift-.)
+Fast Reverse = Shift-J (Shift-J)
+Play Slow = Shift-K (Shift-K)
+Fast Forward = Shift-L (Shift-L)
+Go to Mark In = Shift-I (Shift-I)
+Go to Mark Out = Shift-O (Shift-O)
+Play Slow = Shift-Space (not assigned)
+Go to Media Page = Shift-1 (Shift-2)
+Go to Cut Page = Shift-2 (Shift-3)
+Go to Edit Page = Shift-3 (Shift-4)
+Go to Fusion Page = Shift-4 (Shift-5)
+Go to Color Page = Shift-5 (Shift-6)
+Go to Fairlight Page = Shift-6 (Shift-7)
+Go to Deliver Page = Shift-7 (Shift-8)
+Decrease Audio Level 3db = Shift-- (Alt-Shift--)
+Increase Audio Level 3db = Shift-+ (Alt-Shift-=)
+Delete Gaps = Ctrl-R (not assigned)
+Enable Clip = Ctrl-D (D)
+Nudge Multiframe Left = Ctrl-G (Shift-,)
+Nudge Multiframe Right = Ctrl-H (Shift-.)
+Select All = Ctrl-A (Ctrl-A)
+Save Project = Ctrl-S (Ctrl-S)
+Undo = Ctrl-Z (Ctrl-Z)
+Cut = Ctrl-X (Ctrl-X)
+Copy = Ctrl-C (Ctrl-C)
+Paste = Ctrl-V (Ctrl-V)
+Clear Mark In = Alt-I (Alt-I)
+Clear Mark Out = Alt-O (Alt-O)
+Delete Marker = Alt-X (Alt-M)
+----
+
+== Additional favourite mappings
+
+`Num+`/`-` for *Increment*/*Decrement Timecode* as https://forum.blackmagicdesign.com/viewtopic.php?f=33&t=135632#p732618[shown here].
+With selected clip(s) it moves the clip(s), otherwise it moves the playhead.
+With that just press `Num+` (or `Num-`), number of frames/time (e.g. `5000` for 50:00 or 50s) and `Enter`.
+Alternative to `5000` is also `50:` or for 1 minute you just enter `1::` and `Enter`.
+Watch the timeline viewer as you enter the time.
+If the time goes to the left viewer (left viewer title is red) then it does not move the clip in the timeline, but frame in the previewed media clip.
+Use `Q` to switch between Source/Timeline Viewer.

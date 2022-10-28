@@ -4,7 +4,8 @@
 
 == Fitting photo
 
-Use *Project Settings | Image Scaling | Input Scaling* is set to *Scale full frame with crop* for easy working with photos.
+Use *Project Settings | Image Scaling | Input Scaling* is set to *Scale full frame with crop*
+for easy working with photos.
 
 In some projects *Center crop with no resizing* can be useful too.
 
@@ -20,3 +21,9 @@ If photo fits (matching height) with Transform Zoom = 1, then to fill the screen
 
 How to hover above a map with rotation in place after translate?
 In short, *first move Anchor Point* then change Zoom/Position; do it like this for each keyframe.
+
+== Effects
+
+* Many great effects are shown in https://youtu.be/zJXKK49Wxmw[this video by MrAlexTech],
+including https://youtu.be/zJXKK49Wxmw&t=413s[simple blur tracking]
+
