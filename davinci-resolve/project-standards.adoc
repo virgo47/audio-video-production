@@ -2,6 +2,17 @@
 
 Or just ideas, or suggestions...
 
+== How to prepare project template
+
+Based on https://youtu.be/ZGKiCtByVlw[this video] (MrAlexTech):
+
+* Open new project, adjust project settings.
+* Create project bin structure (not power bins) with the template bin on top.
+* Add whatever template resources you want to the bins, including prepared timelines.
+* Right-click the top-level template bin and export it.
+
+That's it, next time just open the `template.drb` file (name it as you wish) and you're ready to go.
+
 == Used fonts, titles setup
 
 Some fonts are downloaded from https://fonts.google.com[Google Fonts], use
