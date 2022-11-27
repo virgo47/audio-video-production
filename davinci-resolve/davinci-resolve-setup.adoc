@@ -68,11 +68,11 @@ To locate the directory with concrete custom title:
 
 image:davinci-resolve-custom-fusion-titles-location.png[]
 
-1. You must go to *Fusion Page* first.
-2. Go to *Effects Library*.
-3. Choose *Edit Templates | Titles*
-4. Locate the title of interest, right-click and click *Show Folder*.
-5. Folder with located title will open - in this case it's custom title under
+. You must go to *Fusion Page* first.
+. Go to *Effects Library*.
+. Choose *Edit Templates | Titles*
+. Locate the title of interest, right-click and click *Show Folder*.
+. Folder with located title will open - in this case it's custom title under
 `ProgramData`.
 
 If you right click *Titles* in the navigation pane you can use *Show Folder*
@@ -103,10 +103,10 @@ Following picture summarizes the process (after download) - *you must be on the 
 
 image:davinci-resolve-custom-fusion-transition-installation.png[]
 
-1. Go to *Effects Library*.
-2. Choose *Edit Templates | Transitions*
-3. Unpack the assets, it can't be installed from inside the zip.
-4. Drag-and-drop the selected `*.settings` files to the right side of the *Effects Library*.
+. Go to *Effects Library*.
+. Choose *Edit Templates | Transitions*
+. Unpack the assets, it can't be installed from inside the zip.
+. Drag-and-drop the selected `*.settings` files to the right side of the *Effects Library*.
 
 After a while the UI refreshes and the new effects appear in the list.
 If we check the folder where they are installed (right-click the effect, then click *Show Folder*

@@ -1,5 +1,22 @@
 = DaVinci Resolve Cheat Sheet
 
+See my https://docs.google.com/spreadsheets/d/1H0qFmAbtIQ7yW85nrro4jP0JBMYFSYusO-96LRIZm7E/edit#gid=0[keyboard shortcuts cheat sheet].
+
+== Track Destination vs Auto Select
+
+* Tutorial about Track Destination Selection ("orange boxes") - that are *not* about copy/paste:
+https://youtu.be/7B6nrf4o3f4[CONTROL Your Track DESTINATION with Precision in DaVinci Resolve]
+** `Ctrl+Shift+Up/Down` moves the video destination selection up/down;
+** `Ctrl+Alt+Up/Down` moves the audio destination selection up/down;
+** `Alt+number` chooses the video destination track, second press disables the selection (works both for alphanumeric part and numpad);
+** `Ctrl+Alt+number` does the same for audio destination (if possible, depending on the source media).
+* Tutorial about "Auto Select" which is related to copy/paste:
+https://youtu.be/XokE4rytApI[A Deceptively POWERFUL Button YOU MUST KNOW - DaVinci Resolve Auto Select]
+** `Alt+click` select single track (e.g. for paste);
+** `1`-`5` Auto Select/Deselect V1-5 (customized hotkey);
+** `Alt+F9` Auto Select/Deselect All Video, `Ctrl+Alt+F9` for All Audio; also with `Shift+click` on any of the icons;
+** the tutorial also explains what actions are affected by the Auto Select.
+
 == Edit page
 
 Many things depend on the focus (see `Q` Source/Timeline toggle) and also on the selection
