@@ -27,3 +27,6 @@ In short, *first move Anchor Point* then change Zoom/Position; do it like this f
 * Many great effects are shown in https://youtu.be/zJXKK49Wxmw[this video by MrAlexTech],
 including https://youtu.be/zJXKK49Wxmw&t=413s[simple blur tracking]
 
+* For masking presets for the Edit page see https://youtu.be/qJsFPzhIIMU[this video by Patrick Stirling].
+
+

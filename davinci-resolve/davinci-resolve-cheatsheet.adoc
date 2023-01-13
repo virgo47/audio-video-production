@@ -66,3 +66,8 @@ it is actually faster to switch to blade tool `B`, click and switch back to sele
 == Missing shortcut?
 
 * *Trim | Fade In to Playhead*
+
+== Tips/tricks/videos
+
+* Rybka's https://youtu.be/UYApQQwy76E[10 Powerful Davinci Resolve 18 SHORTCUTS for FASTER Video Editing!]
+* MrAlexTech's tips for wierd issues: https://youtu.be/pBoUwKl-DXc[They MIGHT fix your DAVINCI RESOLVE Workflow issues too!]
