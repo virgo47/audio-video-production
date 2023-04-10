@@ -1,4 +1,5 @@
 = DaVinci Resolve Cheat Sheet
+:toc:
 
 See my https://docs.google.com/spreadsheets/d/1H0qFmAbtIQ7yW85nrro4jP0JBMYFSYusO-96LRIZm7E/edit#gid=0[keyboard shortcuts cheat sheet].
 
@@ -71,3 +72,4 @@ it is actually faster to switch to blade tool `B`, click and switch back to sele
 
 * Rybka's https://youtu.be/UYApQQwy76E[10 Powerful Davinci Resolve 18 SHORTCUTS for FASTER Video Editing!]
 * MrAlexTech's tips for wierd issues: https://youtu.be/pBoUwKl-DXc[They MIGHT fix your DAVINCI RESOLVE Workflow issues too!]
+* Casey Faris on https://youtu.be/qCpjGRYLQdE[Basic Tracking in Fusion Page - DaVinci Resolve Basics Tutorial]

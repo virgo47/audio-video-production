@@ -1,4 +1,5 @@
 :imagesdir: ../images/
+:toc:
 
 = DaVinci Resolve Procedures
 
@@ -23,6 +24,8 @@ How to hover above a map with rotation in place after translate?
 In short, *first move Anchor Point* then change Zoom/Position; do it like this for each keyframe.
 
 == Effects
+
+* See also link:davinci-resolve-setup.adoc[Resolve Setup] and 3rd party presets there.
 
 * Many great effects are shown in https://youtu.be/zJXKK49Wxmw[this video by MrAlexTech],
 including https://youtu.be/zJXKK49Wxmw&t=413s[simple blur tracking]

@@ -1,4 +1,5 @@
 :imagesdir: ../images/
+:toc:
 
 = DaVinci Resolve Notes
 
@@ -43,8 +44,19 @@ Not that useful for audio cue (as presented somewhere), use clip marker for that
 * *Timeline | Clean Up Video Tracks | Flatten Unused Clips* to remove unnecessary clips.
 It's also possible to just disable the clips or change their color.
 
+== 3rd party presets
 
-== 3rd-party title packs
+Since 17.4, installing effect/transition presets is very easy.
+Download the DRFX file and just click it, DaVinci Resolve asks if you want to install it, easy.
+
+Sources of free presets:
+
+* https://ko-fi.com/mralextech/shop
+* https://stirlingsupply.co/collections/free-presets
+
+=== OLD WAY, don't use it
+
+==== 3rd-party title packs
 
 [TIP]
 The procedure of installing titles by copying to the directory is an "old way".
@@ -94,7 +106,7 @@ Used custom titles:
 * https://motionarray.com/davinci-resolve-templates/simple-creative-titles-860872[Simple
 Creative Titles] by vladoskin
 
-== 3rd-party transitions
+==== 3rd-party transitions
 
 See https://youtu.be/xW2bq8Quw64[this video] by MrAlexTech for example how to install free
 "Ultimate Seamless Transitions pack for DaVinci Resolve 17".
