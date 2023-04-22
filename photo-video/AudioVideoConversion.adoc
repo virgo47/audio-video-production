@@ -18,7 +18,7 @@ location* and 2 is *category*;
 See more about exiftool https://exiftool.org/exiftool_pod.html[options]
 or https://exiftool.org/faq.html[FAQ]
 
-== FFmpeg and HW acceleration
+== FFmpeg and HW/GPU acceleration
 
 FFmpeg in ImageMagick has NVENC and similar acceleration enabled, but:
 
@@ -28,6 +28,9 @@ There is no post-compilation configuration file, so everything must be added to 
 ** This means using `-hwaccel cuda` before input - which brings massive speed-up.
 ** Before output use `-c:v h264_nvenc`, possibly with more options, check https://trac.ffmpeg.org/wiki/HWAccelIntro#CUDANVENCNVDEC[the docs].
 * Tune the quality settings, compare with settings and output for non-accelerated video.
+
+[WARNING]
+This is still WIP and I don't yet have any tuned example commands!
 
 TODO: Create a bash function instead of `ff` alias to make it automatic?
 

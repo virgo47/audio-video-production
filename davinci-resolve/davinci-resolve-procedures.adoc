@@ -32,4 +32,22 @@ including https://youtu.be/zJXKK49Wxmw&t=413s[simple blur tracking]
 
 * For masking presets for the Edit page see https://youtu.be/qJsFPzhIIMU[this video by Patrick Stirling].
 
+== PIP with the same video, but zoomed-in
 
+Example, for DCS video I want to see the whole screen normally, plus a small part of it - but magnified.
+This can be done:
+
+* Select just the video, copy it above - keep it synced.
+* Add *Open FX / Filters* named *Transform* - this one will be used only for crop.
+Open the Inspector, Effects, Transform, Image Adjustment, check Crop, set the crop (e.g. 0.8, 0.03, 0.7, 0.05 for bottom right).
+* Add *Open FX / Filters* named *Drop Shadow* to add some depth for some separation.
+* Now choose the part of the picture you want to see there in the Inspector, Video.
+** Move the Anchor Point to the center of interest (you may temporarily disable Effects to see it uncropped).
+** Zoom ad-lib.
+** Change position to place it into the PIP area.
+
+When adding the same effect for other clips, just copy them from the first one.
+Copy the first clip, and on the target clip use `Alt+V` (Paste Attributes).
+Choose the following attributes (plugins is for Open FX stuff, that is the crop and shadow):
+
+image:davinci-resolve-copy-pip-zoom-attributes.png[]
