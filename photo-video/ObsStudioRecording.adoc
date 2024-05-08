@@ -11,8 +11,29 @@ Audio Track: select first three.
 
 We will use first for the mixed audio, second for the desktop audio only and third for the microphone.
 
-Encoder: *x264* - this one supports rate control via *CRF* which we want to use.
-No rescaling needed - we mostly go for 1080p video.
+Encoder can use either CPU or GPU.
+GPU is good when CPU bound, but it may be better to use CPU when GPU load is higher.
+
+=== GPU with NVENC
+
+* Encoder: *NVIDIA NVENC H.264*
+* No rescale unless we want different resolution than captured.
+* Encoder Settings:
+** Rate Control: CQP
+** CQ Level: 22
+** Keyframe Interval: 0s
+** Preset: P5 or P4
+** Tuning: High Quality
+** Multipass Mode: Single Pass
+** Profile: high
+** Look-ahead and Psycho Visual Tuning both off
+** GPU: 0 (or as needed)
+** Max B-fames: 2
+
+=== CPU with x264
+
+* Encoder: *x264* - this one supports rate control via *CRF* which we want to use.
+* No rescaling needed.
 
 Rate control *CRF* set to *21* and CPU Usage Preset *veryfast*.
 This seems to work well enough, the final video can have wide range of bitrates, e.g. UT2004 was around 15Mbps,

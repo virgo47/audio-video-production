@@ -18,10 +18,15 @@ This stuff applies if *Project Settings | Image Scaling | Input Scaling* is set 
 If photo fits (matching height) with Transform Zoom = 1, then to fill the screen (matching width) the zoom must be:
 (16/3) / (9/2) = 1.185185... or 1.1852 or 1.186 or 1.19 for full coverage.
 
-== TODO
+== Hover over map with centered rotate/zoom
 
 How to hover above a map with rotation in place after translate?
+
+TODO: How to do it with additional translate effect?
+
+Obsolete:
 In short, *first move Anchor Point* then change Zoom/Position; do it like this for each keyframe.
+This is super annoying way and is not an acceptable workflow (too much work, no flow).
 
 == Effects
 
@@ -51,3 +56,23 @@ Copy the first clip, and on the target clip use `Alt+V` (Paste Attributes).
 Choose the following attributes (plugins is for Open FX stuff, that is the crop and shadow):
 
 image:davinci-resolve-copy-pip-zoom-attributes.png[]
+
+== Rendering settings
+
+Issues to avoid:
+
+* AAC codec in DaVinci Resolve sometimes produces strange artifacts (confirmed on version 18, reports
+found also https://forum.blackmagicdesign.com/viewtopic.php?f=21&t=171831&sid=9f3ab117cef2b21ad6f2fdeaf83456f6[on the forum]).
+I decided to use MP3 192kbps instead.
+* H.264 sometimes doesn't cleanly render a clear cut in the original video (e.g. presentation
+recorded with OBS), so I started to use H.265.
+* MP4 container in DaVinci Resolve does not offer MP3, only AAC or Flac.
+Instead, MKV or MOV can be used - I chose MKV.
+
+Current settings:
+
+* Format: MKV
+* Codec: H.265
+* Encoder: Auto
+* Quality: Medium or High, Best is too big (My 1080/1440p presets are Medium by default)
+* Audio codec: MP3 with 192 Kb/s
