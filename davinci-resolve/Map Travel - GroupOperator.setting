@@ -1,0 +1,197 @@
+{
+	Tools = ordered() {
+		MapTravel = GroupOperator {
+			Inputs = ordered() {
+				Input1 = InstanceInput {
+					SourceOp = "Move",
+					Source = "Center",
+					Name = "Map Center",
+				},
+				Input2 = InstanceInput {
+					SourceOp = "RotateAndZoom",
+					Source = "Size",
+					Name = "Zoom",
+					MinScale = 0.1,
+					MaxScale = 20,
+					Default = 1,
+				},
+				Input3 = InstanceInput {
+					SourceOp = "RotateAndZoom",
+					Source = "Angle",
+					Name = "Rotate",
+					MinScale = -1080,
+					MaxScale = 1080,
+					Default = 0,
+				},
+				Input4 = InstanceInput {
+					SourceOp = "RotateTraveler",
+					Source = "Size",
+					Name = "Traveler Size",
+					MinScale = 0.1,
+					MaxScale = 20,
+					Default = 1,
+				},
+				Input5 = InstanceInput {
+					SourceOp = "RotateTraveler",
+					Source = "Angle",
+					Name = "Traveler Angle",
+					MinScale = -1080,
+					MaxScale = 1080,
+					Default = 0,
+				},
+				Input6 = InstanceInput {
+					SourceOp = "Merge1",
+					Source = "BlendClone",
+					Name = "Traveler Opacity",
+					Default = 1,
+				},
+				Input7 = InstanceInput {
+					SourceOp = "LoaderMap",
+					Source = "Clip",
+					Name = "Map Filename",
+					Page = "Setup"
+				},
+				Input8 = InstanceInput {
+					SourceOp = "LoaderTraveler",
+					Source = "Clip",
+					Name = "Traveler Filename",
+				},
+				Input9 = InstanceInput {
+					SourceOp = "MoveTraveler",
+					Source = "Center",
+					Name = "Traveler Center",
+				},
+				Input10 = InstanceInput {
+					SourceOp = "Crop",
+					Source = "XSize",
+					Name = "Crop X",
+					MaxScale = 10000,
+					Default = 1920,
+				},
+				Input11 = InstanceInput {
+					SourceOp = "Crop",
+					Source = "YSize",
+					Name = "Crop Y",
+					MaxScale = 10000,
+					Default = 1080,
+				},
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "Merge1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo { Pos = { 0, 0 } },
+			Tools = ordered() {
+				LoaderTraveler = Loader {
+					Clips = {
+						Clip {
+							ID = "Clip1",
+							Filename = "H:\\work\\video-projects\\po-stopach-hrdinov-snp\\po-stopach-hrdinov-snp-common\\images\\hiker-on-map.png",
+							FormatID = "PNGFormat",
+							StartFrame = -1,
+							LengthSetManually = true,
+							TrimIn = 0,
+							TrimOut = 0,
+							ExtendFirst = 0,
+							ExtendLast = 0,
+							Loop = 0,
+							AspectMode = 0,
+							Depth = 0,
+							TimeCode = 0,
+							GlobalStart = -85,
+							GlobalEnd = -85
+						}
+					},
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						["Clip1.PNGFormat.PostMultiply"] = Input { Value = 1, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 454.943, -231.289 } },
+				},
+				LoaderMap = Loader {
+					Clips = {
+					},
+					NameSet = true,
+					Inputs = {
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 217.076, -150.428 } },
+				},
+				RotateAndZoom = Transform {
+					NameSet = true,
+					Inputs = {
+						Input = Input {
+							SourceOp = "Move",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 476.923, -151.59 } },
+				},
+				Move = Transform {
+					NameSet = true,
+					Inputs = {
+						Input = Input {
+							SourceOp = "LoaderMap",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 347.98, -150.88 } },
+				},
+				MoveTraveler = Transform {
+					NameSet = true,
+					Inputs = {
+						Input = Input {
+							SourceOp = "LoaderTraveler",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 588.943, -232.351 } },
+				},
+				Crop = Crop {
+					NameSet = true,
+					Inputs = {
+						XOffset = Input { Value = 90, },
+						YOffset = Input { Value = 1510, },
+						XSize = Input { Value = 1920, },
+						YSize = Input { Value = 1080, },
+						KeepCentered = Input { Value = 1, },
+						Input = Input {
+							SourceOp = "RotateAndZoom",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 592.943, -152.404 } },
+				},
+				RotateTraveler = Transform {
+					NameSet = true,
+					Inputs = {
+						Input = Input {
+							SourceOp = "MoveTraveler",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 722.276, -232.351 } },
+				},
+				Merge1 = Merge {
+					Inputs = {
+						Background = Input {
+							SourceOp = "Crop",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "RotateTraveler",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 721.786, -152.16 } },
+				}
+			},
+		}
+	},
+	ActiveTool = "MapTravel"
+}

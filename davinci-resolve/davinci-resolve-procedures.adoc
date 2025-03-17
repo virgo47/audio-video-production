@@ -20,13 +20,72 @@ If photo fits (matching height) with Transform Zoom = 1, then to fill the screen
 
 == Hover over map with centered rotate/zoom
 
-How to hover above a map with rotation in place after translate?
+In Vegas/Movie Studio it was trivial to "travel" over the map with rotate and zoom applied after translation,
+that is, zoom and rotate always used center of the frame as the reference point.
+In DaVinci Resolve, the center of the media is used for both Zoom and Rotation Angle which is an unexpected behaviour when the Position is not 0,0.
+This can be mitigated by adjusting the Anchor Point, but the workflow is not straightforward (details lower).
 
-TODO: How to do it with additional translate effect?
+The tested options are:
 
-Obsolete:
-In short, *first move Anchor Point* then change Zoom/Position; do it like this for each keyframe.
-This is super annoying way and is not an acceptable workflow (too much work, no flow).
+* Using just Transform Position+Zoom without Rotation.
+This can be done in a straightforward manner, Zoom first, then adjust Position, for each keyframe.
+* Using Transform, including Anchor Point, when Rotation is needed.
+Here you generally want to adjust Anchor Point first, then Position to center on the Anchor Point.
+Then adjust Zoom and/or Rotation as needed for the keyframe.
+* Using Open FX effect "Transform" - this is adjusted in the Effects tab of the Inspector and applies after Video tab.
+Custom effect Toolbox / Effects / Transform Over can also be used, it is a simplified version of the default effect with more reasonable ranges for parameters.
+See the following subsection for detailed information, especially about input scaling issues.
+* Custom effect Toolbox / Generators / Map Travel can be used.
+In this case the input media is configured in its Setup panel, there are some neat options (traveller image and its scaling),
+but this is also cumbersome when it comes to keyframes, more details in the following subsection.
+
+=== Using transform effect
+
+Use Effects/Transform (or custom Transform Over) for Zoom and Rotate and Video/Transform for Position.
+There is no need to adjust the Anchor Point and you can adjust the Position with Zoom already applied.
+Workflow needs to be split into two passes though, first create the position keyframes with Video/Transform,
+then add zoom/rotation to them with Effects/Transform.
+Additional timing fixes for both passes are not possible as the clip Keyframe Editor only shows Video/Transform keyframes, and the Curves Editor only shows one additional parameter, e.g. Effects/Transform/Rotation.
+
+image:davinci-resolve-clip-keyframe-and-curve-editor-1.png[]
+
+You can marquee-select the keyframes for multiple parameters in the Keyframe Editor.
+But you can't marquee-select across keyframe and curve editor, instead, the curve editor switches to the first selected parameter from the keyframe editor.
+Even if select worked across both, it's still not possible to show both Rotate and Zoom at the same time.
+That means you can't move all keyframes from both Inspection tabs at the same time.
+
+Alternatively, you can use position from the effect, but that makes that parameter harder to adjust later as well.
+It's still better to have easy to work position, zoom and rotation can be redone quite easily, when necessary.
+
+Custom *Transform Over* effect is a simplified version with greater ranges for Zoom (0.1 to 10 instead of 0.25 to 4) and Rotate (±360° instead of 180).
+In both cases, there is an option to input the values out of the slider range manually, so it's not a hard limitation.
+
+The main problem with this solution is the *input scaling*, when the zoom of the effect does not utilize the original resolution of the media.
+To overcome this, it is best to set some constant initial Zoom factor to the Video/Transform, e.g. with image 4000x2000px
+and target resolution 1920x1080 use 2 or more to reduce the down-sampling effect that would otherwise occur.
+
+// TODO^^ there may be various other problems, e.g. rotate makes black border, because it works with stuff cropped from Video/Transform
+// IIRC, there needs to be some zoom >1 for good rotation in Effects/Transform, but that already produces upscaling blur.
+
+Explanations to various types of Fusion compositions and what it means for the input scaling can be found on forums https://forum.blackmagicdesign.com/viewtopic.php?f=22&t=150418[here] and https://forum.blackmagicdesign.com/viewtopic.php?f=22&t=136857[here].
+There is even a great https://youtu.be/0OzvS1qy850[video by Creative Video Tips] - check 2:32 for Fusion solution with Media in with original resolution.
+// TODO ^^ how to do this? Why did not I use Media In in the Map Travel macro?
+
+=== Using Fusion generator (Map Travel)
+
+This was my attempt to make the whole "map travel" solution Fusion-centric.
+The source code is link:Map Travel - GroupOperator.setting[here].
+As a `GroupOperator` (see line 3), you can drag-and-drop the file into the Fusion and dive into the node to explore it.
+Currently, the nested `Crop_1` aims at 1920x1080 resolution, but this can be changed.
+
+To change this into an available macro, change the `GroupOperator` on line 3 to `MacroOperator`.
+Then name the file `Map Travel.setting` and place it into your `AppData\Roaming\Blackmagic Design\DaVinci Resolve` under `Support\Fusion\Templates\Edit\Generators`.
+This version will be available from the Effects palette and will not act as a group of nodes.
+
+To use it, simply add the effect onto the clip, just like Transform effects.
+//TODO procedure
+
+// TODO what about color page and Pan/scan there? Mentioned in one of the comments under the video about proper zooming.
 
 == Effects
 
