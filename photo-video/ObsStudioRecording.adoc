@@ -13,8 +13,24 @@ We will use first for the mixed audio, second for the desktop audio only and thi
 
 Encoder can use either CPU or GPU.
 GPU is good when CPU bound, but it may be better to use CPU when GPU load is higher.
+Actually, with good GPU encoder/decoder, use GPU acceleration.
 
-=== GPU with NVENC
+=== GPU with NVENC AV1 (for 5060 Ti)
+
+* Video Encoder: *NVIDIA NVENC AV1*
+* No rescale unless we want different resolution than captured.
+* Encoder Settings:
+** Rate Control: Variable Bitrate with Target Quality
+** Target Quality: 35 (goes to 63 and 35 is still very good and output is not very big)
+** Keyframe Interval: 0s
+** Preset: P5
+** Tuning: High Quality
+** Multipass Mode: Two Passes (Quarter Resolution)
+** Profile: main (no other option here)
+** Look-ahead and Adaptive Quantization both ON
+** B-Frames: 2
+
+=== GPU with NVENC (old for 3060)
 
 * Encoder: *NVIDIA NVENC H.264*
 * No rescale unless we want different resolution than captured.
@@ -28,7 +44,7 @@ GPU is good when CPU bound, but it may be better to use CPU when GPU load is hig
 ** Profile: high
 ** Look-ahead and Psycho Visual Tuning both off
 ** GPU: 0 (or as needed)
-** Max B-fames: 2
+** Max B-frames: 2
 
 === CPU with x264
 

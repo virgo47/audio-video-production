@@ -76,13 +76,16 @@ There is even a great https://youtu.be/0OzvS1qy850[video by Creative Video Tips]
 This was my attempt to make the whole "map travel" solution Fusion-centric.
 The source code is link:Map Travel - GroupOperator.setting[here].
 As a `GroupOperator` (see line 3), you can drag-and-drop the file into the Fusion and dive into the node to explore it.
-Currently, the nested `Crop_1` aims at 1920x1080 resolution, but this can be changed.
 
 To change this into an available macro, change the `GroupOperator` on line 3 to `MacroOperator`.
 Then name the file `Map Travel.setting` and place it into your `AppData\Roaming\Blackmagic Design\DaVinci Resolve` under `Support\Fusion\Templates\Edit\Generators`.
 This version will be available from the Effects palette and will not act as a group of nodes.
 
-To use it, simply add the effect onto the clip, just like Transform effects.
+To use it, simply add the generator to the timeline, then:
+
+* Under `Inspector/Video/Generator`, effect `Map Travel Generator`, tab `Setup`, load the right media (`Map Filename`).
+* Use `Controls` tab to move over the map and add keyframes as necessary.
+Note: These keyframes can't be navigated with Next/Previous hotkeys, only with the chevrons in the inspector.
 //TODO procedure
 
 // TODO what about color page and Pan/scan there? Mentioned in one of the comments under the video about proper zooming.
