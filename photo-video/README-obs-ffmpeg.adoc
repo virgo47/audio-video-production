@@ -1,0 +1,161 @@
+= OBS recording and processing
+:toc:
+
+For OBS NVENC AV1 settings check:
+https://github.com/virgo47/audio-video-production/blob/master/photo-video/ObsStudioRecording.adoc#gpu-with-nvenc-av1-for-5060-ti
+
+== Just cutting, no transcoding
+
+Using `-ss` to start the cut video may cause problems when there is no keyframe around.
+If `-ss` is placed after `-i` input file, it cuts the video precisely, which is fine while recoding - although the whole video before the start is recoded as well.
+If `-ss` is placed *before* `-i`, it starts with the nearest keyframe *before* that time.
+This is great for fast cuts and cuts without transcoding, because the video does not start black.
+This may add a second or two before the desired time, so it is recommended to use `-to` time, not `-t` duration for the end.
+Use `-to` together with `-ss`, otherwise the result may be confusing.
+E.g., `-ss 10 -i in.mkv -to 90` creates 90s long video instead of finishing ~80s video at the 90s mark from the input file.
+
+----
+# -to is absolute time, -t is duration, -ss can be skipped if you want to cut end only
+$ ff -ss 10 -to 90 -i in.mkv -map 0 -c:a copy -c:v copy out.mkv
+----
+
+== Remuxing and stream splitting
+
+TL;DR - use (bash script in tools/bin):
+
+----
+$ obs-mkv-split video-name.mkv
+----
+
+See: https://github.com/virgo47/litterbin/blob/master/notes/audio-video/ObsStudioRecording.adoc
+
+Or use Remux in OBS and drag multi-audio MP4 into Movie Studio without any problem.
+
+Batch remuxing with only the desktop audio track:
+----
+for i in *.mkv; do
+  ffmpeg -i "$i" -map 0:v:0 -map 0:a:1 -c copy out.mkv && mv out.mkv "$i"
+done
+----
+
+== Conversion to MP4 + selection of desktop only track
+
+----
+$ ff -i in.mkv -map 0:v:0 -map 0:a:1 out.mp4
+----
+
+== Batch conversion with mixed audio track only
+
+You could use `-map 0:v:0 -map 0:a:0` for mixed track - Desktop + voiceover, straight from OBS.
+But without any map the conversion uses the first video + the first audio anyway, so no `-map` here.
+
+----
+for VIDEO_IN in 2023-04-22_dcs*; do
+  ff -i $VIDEO_IN "${VIDEO_IN%.*}.mp4"
+done
+----
+
+== NVENC (HW acceleration)
+
+Available `nvenc` codecs:
+
+----
+$ ff -codecs | grep "^ DEV" | grep -i nvenc
+ DEV.L. av1                  Alliance for Open Media AV1 (decoders: libaom-av1 av1 av1_cuvid av1_qsv) (encoders: libaom-av1 av1_nvenc av1_qsv av1_amf av1_vaapi)
+ DEV.LS h264                 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10 (decoders: h264 h264_qsv h264_cuvid) (encoders: libx264 libx264rgb h264_amf h264_mf h264_nvenc h264_qsv h264_vaapi)
+ DEV.L. hevc                 H.265 / HEVC (High Efficiency Video Coding) (decoders: hevc hevc_qsv hevc_cuvid) (encoders: libx265 hevc_amf hevc_d3d12va hevc_mf hevc_nvenc hevc_qsv hevc_vaapi)
+----
+
+This means you can encode to `av1_nvenc`, `h264_nvenc` or `hevc_nvenc`.
+
+Let's make a bash function `ffnv <input-file> <encoder-shortcut> [other params...] <output-file>`
+and companion shortcut `ffnvca` that copies all the audio tracks (`-map 0 -c:a copy`):
+
+----
+# FFmpeg NVENC using GPU (hevc=h265)
+ffnv() {
+  if [ $# -lt 3 ]; then
+    echo "Usage: ffnv <input-file> <av1|h264|hevc> [other output options...] <output-file>"
+    return 1
+  fi
+
+  local input="$1"
+  shift
+  local format="$1"
+  shift
+
+  ffmpeg -hwaccel cuda -hwaccel_output_format cuda \
+    -i "$input" \
+    -c:v "${format}_nvenc" \
+    "$@"
+}
+
+# FFmpeg NVENC using GPU with copy audio (-c:a copy) included
+ffnvca() {
+  local input="$1"
+  shift
+  local format="$1"
+  shift
+
+  ffnv "$input" "$format" -map 0 -c:a copy "$@"
+}
+
+# recode to av1 -cq $2, copy audio, WARNING this overrides the original file! (don't use output file param)
+ffav1q() {
+  local input="$1"
+  shift
+  local quality="$1"
+  shift
+
+  ffnvca "$input" av1 -cq $quality "$@" "out-$input"
+  mv "out-$input" "$input"
+}
+----
+
+Now we can just write:
+
+----
+# H.265 output with constant quality 25
+ffnvca 2025-05-03_11-22-31.mkv hevc -cq 25 out.mkv
+
+# AV1 output, default quality, audio #1 transcoded as well
+ffnv 2025-05-03_11-22-31.mkv av1 output.mp4
+
+# just recoding AV1 to lower quality
+ffav1q dcs-maps-norm-1000m-q100.mkv 40
+----
+
+Note that with `ffnv`, the default quality for the encoders is quite low.
+You likely need either `-b:v 5M` parameter to set the bitrate (`5M` is just an example), or, preferably, a quality settings:
+
+* Use `-cq 25` to set the quality of H.264/265 (h264/hevc), e.g. `-cq 27` results in about 19Mbps for 1440p footage.
+Parameter `cq` works fine also for AV1 (`av1_nvenc`).
+* There is also `-qp` param for fixed quality of each frame, but this causes wilder bitrate variation.
+
+Be aware what is the input quality setting, e.g. I use OBS with AV1, quality equivalent of `-cq 35 -b:v 45M`.
+There is no good reason to use `cq` lower than 35 in that case.
+CQ 35 is quite good, but there are some compromises, e.g. very distant chimney smoke can be not captured properly.
+
+== Video file listing with duration and bitrate
+
+List video files sorted by duration:
+
+----
+> list-duration.txt
+for f in *.mkv; do
+  duration=$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$f")
+  echo "$duration - $f" >> list-duration.txt
+done
+sort -n list-duration.txt
+----
+
+Similar list, sorted by bitrate:
+
+----
+> list-bitrate.txt
+for f in *.mkv; do
+  bitrate=$(ffprobe -v error -select_streams v:0 -show_entries format=bit_rate -of default=noprint_wrappers=1:nokey=1 "$f")
+  echo "$bitrate - $f" >> list-bitrate.txt
+done
+sort -n list-bitrate.txt
+----
